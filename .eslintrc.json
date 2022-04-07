@@ -1,0 +1,85 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint/eslint-plugin", "prettier"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/eslint-recommended",
+    // "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "root": true,
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "semi": ["error", "always"],
+    "quotes": [
+      "error",
+      "single",
+      { "avoidEscape": true, "allowTemplateLiterals": true }
+    ],
+    // "indent": ["error", 2, { "SwitchCase": 1 }], // conflicting with prettier
+    "no-alert": 2,
+    "no-cond-assign": ["error", "always"],
+    "arrow-parens": ["error", "always"],
+    "no-console": "error",
+    "no-constant-condition": "error",
+    "curly": "error",
+    "eqeqeq": ["error", "always", { "null": "ignore" }],
+    "no-multi-spaces": ["error", { "ignoreEOLComments": false }],
+    "no-proto": "error",
+    "no-return-assign": ["error", "always"],
+    "no-self-assign": ["error", { "props": true }],
+    "no-redeclare": "error",
+    "no-self-compare": "error",
+    "no-useless-concat": "error",
+    // "no-useless-escape": "error", //"\"";
+    // "array-bracket-spacing": ["error", "always"],
+    //"space-in-parens": ["error", "never", { "exceptions": ["{}", "[]"] }],
+    "object-curly-spacing": ["error", "always"],
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "func-call-spacing": ["error", "never"],
+    "key-spacing": ["error", { "afterColon": true }],
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "tabWidth": 2,
+        // "comments": 80,
+        "ignoreComments": true,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    // "multiline-ternary": ["error", "never"], // conflicting with prettier
+    "no-whitespace-before-property": "error",
+    // "space-before-function-paren": ["error", {"anonymous": "always", "named": "never", "asyncArrow": "always"}], // conflicting with prettier
+    "eol-last": ["error", "always"],
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": ["return", "class"] }
+    ],
+    "no-multiple-empty-lines": [2, { "max": 1 }],
+    "no-trailing-spaces": [
+      "error",
+      { "skipBlankLines": false, "ignoreComments": true }
+    ],
+    "max-depth": ["error", 4],
+    "space-infix-ops": ["error", { "int32Hint": false }]
+  }
+}
